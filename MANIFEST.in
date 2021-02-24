@@ -1,2 +1,5 @@
 include requirements.txt
-recursive-include evocraft_py/data *
+include evocraft_py/data/server.properties
+include evocraft_py/data/spongevanilla-1.12.2-7.3.0.jar
+include evocraft_py/data/eula.txt
+recursive-include evocraft_py/data/mods *

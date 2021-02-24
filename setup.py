@@ -36,4 +36,9 @@ setup(
     ],
 
     include_package_data=True,
+    entry_points={
+        'console_scripts': [
+            'evocraft-py=evocraft_py.cli:main',
+        ],
+    },
 )

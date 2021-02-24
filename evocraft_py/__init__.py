@@ -1,6 +1,6 @@
 from evocraft_py.minecraft_pb2 import * # noqa
 from evocraft_py.minecraft_pb2_grpc import * # noqa
-
+from evocraft_py.evocraft_py import * # noqa
 
 """evocraft-py - Python client for Evocraft"""
 
