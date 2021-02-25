@@ -23,8 +23,8 @@ setup(
 
     description="Python client for Evocraft",
 
-    long_description_content_type="text/markdown",
-    long_description=read("README.md"),
+    # long_description_content_type="text/markdown",
+    # long_description=read("README.md"),
 
     packages=find_packages(include=['test_evocraft_py'], exclude=('tests',)),
 
