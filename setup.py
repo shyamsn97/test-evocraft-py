@@ -15,7 +15,6 @@ def read(filename):
 setup(
     name="test_evocraft_py",
     version="0.1.0",
-    url="https://github.com/kragniz/cookiecutter-pypackage-minimal",
     license='MIT',
 
     author="Shyam Sudhakaran",
