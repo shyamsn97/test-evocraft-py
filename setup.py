@@ -12,7 +12,6 @@ def read(filename):
     with io.open(filename, mode="r", encoding='utf-8') as fd:
         return re.sub(text_type(r':[a-z]+:`~?(.*?)`'), text_type(r'``\1``'), fd.read())
 
-
 setup(
     name="test_evocraft_py",
     version="0.1.0",
@@ -23,6 +22,8 @@ setup(
     author_email="shyamsnair@protonmail.com",
 
     description="Python client for Evocraft",
+
+    long_description_content_type="text/markdown",
     long_description=read("README.md"),
 
     packages=find_packages(include=['test_evocraft_py'], exclude=('tests',)),
