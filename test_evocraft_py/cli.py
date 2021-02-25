@@ -1,6 +1,6 @@
 import click
 
-from evocraft_py.evocraft_py import shutdown_server, start_server, start_server_interactive
+from test_evocraft_py.test_evocraft_py import shutdown_server, start_server, start_server_interactive
 
 @click.command()
 @click.option('--start/--shutdown', default=True)

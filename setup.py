@@ -14,18 +14,18 @@ def read(filename):
 
 
 setup(
-    name="evocraft_py",
+    name="test_evocraft_py",
     version="0.1.0",
     url="https://github.com/kragniz/cookiecutter-pypackage-minimal",
     license='MIT',
 
-    author="Louis Taylor",
-    author_email="louis@kragniz.eu",
+    author="Shyam Sudhakaran",
+    author_email="shyamsnair@protonmail.com",
 
     description="Python client for Evocraft",
     long_description=read("README.md"),
 
-    packages=find_packages(exclude=('tests',)),
+    packages=find_packages(include=['test_evocraft_py'], exclude=('tests',)),
 
     install_requires=[],
 
@@ -38,7 +38,7 @@ setup(
     include_package_data=True,
     entry_points={
         'console_scripts': [
-            'evocraft-py=evocraft_py.cli:main',
+            'test-evocraft-py=test_evocraft_py.cli:main',
         ],
     },
 )
