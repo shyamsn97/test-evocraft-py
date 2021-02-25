@@ -12,7 +12,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name="test_evocraft_py",
-    version="0.1.0",
+    version="version='0.1.4'",
     license='MIT',
 
     author="Shyam Sudhakaran",
