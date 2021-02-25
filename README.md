@@ -2,6 +2,7 @@
  
 # Evocraft-py  
 
+[![Latest PyPI version](https://img.shields.io/pypi/v/evocraft_cellular_automata.svg)](https://pypi.python.org/pypi/test-evocraft-py)
 [![Paper](https://img.shields.io/badge/paper-arxiv.2007.02686-B31B1B.svg)](https://arxiv.org/abs/2012.04751)
 [![Conference](https://img.shields.io/badge/EvoStar-2021-4b44ce.svg)]()
 
@@ -12,29 +13,32 @@ A Python interface for Minecraft built on [grpc](https://github.com/real-itu/min
 
 ### 1. Set-up
 
-1. Install Java 8 -aka 1.8- (you can check your version with `java -version`)
-
-   - Unix: `sudo apt-get install openjdk-8-jre`
-   - OSX: 
-     - `brew tap AdoptOpenJDK/openjdk`
-     - `brew cask install adoptopenjdk8`
-     - If troubles, check: [how to install Java on Mac OS](https://mkyong.com/java/how-to-install-java-on-mac-osx/) 
-   - Windows: [Java 8 for Windows](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) 
-
-
-2. Clone repo and install grpc:
-
-   - `git clone https://github.com/real-itu/Evocraft-py`
-   - `pip install grpc`
-
+```
+python -m pip install test-evocraft-py
+```
 
 ### 2. Starting the modded Minecraft server
 
-1. From `Evocraft-py`, start the server with `java -jar spongevanilla-1.12.2-7.3.0.jar`
-2. The first time you try to start the server a texfile eula.txt with be generated, you need to modifying its last line to `eula=true` to accept the Minecraft EULA. Now running `java -jar spongevanilla-1.12.2-7.3.0.jar` will start the server
-3. You should see a bunch of outputs including `[... INFO]: Listening on 5001`. 
-This means it's working and the Minecraft server is ready for commands on port 5001.
-	
+#### Using python api
+
+```
+import test_evocraft_py
+test_evocraft_py.start_server()
+# shutdown
+test_evocraft_py.shutdown_server()
+```
+
+#### Using cli
+```
+Usage: test-evocraft-py [OPTIONS]
+
+  Simple program that greets NAME for a total of COUNT times.
+
+Options:
+  --start / --shutdown  Start or shutdown server
+  --interactive         Start server with interactive server console
+  --help                Show this message and exit.
+```
 
 ### 3. Spawn blocks on the Minecraft server with Python 
 

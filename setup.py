@@ -4,13 +4,11 @@ import re
 
 from setuptools import find_packages
 from setuptools import setup
+from os import path
 
-
-def read(filename):
-    filename = os.path.join(os.path.dirname(__file__), filename)
-    text_type = type(u"")
-    with io.open(filename, mode="r", encoding='utf-8') as fd:
-        return re.sub(text_type(r':[a-z]+:`~?(.*?)`'), text_type(r'``\1``'), fd.read())
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 setup(
     name="test_evocraft_py",
@@ -22,8 +20,8 @@ setup(
 
     description="Python client for Evocraft",
 
-    # long_description_content_type="text/markdown",
-    # long_description=read("README.md"),
+    long_description=long_description,
+    long_description_content_type="text/markdown",
 
     packages=find_packages(include=['test_evocraft_py'], exclude=('tests',)),
 
