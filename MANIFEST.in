@@ -3,3 +3,4 @@ include test_evocraft_py/data/server.properties
 include test_evocraft_py/data/spongevanilla-1.12.2-7.3.0.jar
 include test_evocraft_py/data/eula.txt
 recursive-include test_evocraft_py/data/mods *
+include README.md
