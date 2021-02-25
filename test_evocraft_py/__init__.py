@@ -4,5 +4,5 @@ from test_evocraft_py.test_evocraft_py import * # noqa
 
 """evocraft-py - Python client for Evocraft"""
 
-__version__ = '0.1.5'
+__version__ = '0.1.6'
 __all__ = []
