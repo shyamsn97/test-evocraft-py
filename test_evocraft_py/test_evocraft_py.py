@@ -31,18 +31,25 @@ def shutdown_server(remove_files=True):
     if check_pid() is None:
         print("Cannot find running Evocraft server!")
         return
-    data_path = "{}/data".format(pt)
-    pid_path = "{}/evocraft_server.pid".format(data_path)
-    f = open(pid_path, 'r')
-    pid = int(f.read())
-    os.kill(pid, signal.SIGKILL)
-    os.unlink(pid_path)
-    if remove_files:
-        paths = os.listdir(data_path)
-        for p in paths:
-            if p not in REQUIRED:
-                remove(os.path.join(data_path, p))
-    print("Server running on process {} killed!".format(pid))
+    try:
+        data_path = "{}/data".format(pt)
+        pid_path = "{}/evocraft_server.pid".format(data_path)
+        f = open(pid_path, 'r')
+        pid = int(f.read())
+        os.kill(pid, signal.SIGKILL)
+        os.unlink(pid_path)
+    except Exception:
+        pass
+    
+    try:
+        if remove_files:
+            paths = os.listdir(data_path)
+            for p in paths:
+                if p not in REQUIRED:
+                    remove(os.path.join(data_path, p))
+        print("Server running on process {} killed!".format(pid))
+    except Exception:
+        pass
 
 def write_pid(pid):
     pid_path = "{}/data/evocraft_server.pid".format(pt)
