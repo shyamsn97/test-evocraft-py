@@ -1,6 +1,6 @@
 <div align="center">    
  
-# Evocraft-py  
+# test pypi package for Evocraft-py  
 
 [![Latest PyPI version](https://img.shields.io/pypi/v/evocraft_cellular_automata.svg)](https://pypi.python.org/pypi/test-evocraft-py)
 [![Paper](https://img.shields.io/badge/paper-arxiv.2007.02686-B31B1B.svg)](https://arxiv.org/abs/2012.04751)
